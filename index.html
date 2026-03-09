@@ -5,370 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Goods Panda - E-commerce</title>
+  <link rel="stylesheet" href="index.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <style>
-    :root {
-      --primary-pink: #f23c7f;
-      --bg-light-pink: #fceae8;
-      --cat-orange: #faa031;
-      --cat-pink: #f72a7b;
-      --cat-blue: #3f1ff2;
-      --text-dark: #1e1e1e;
-      --text-light: #7a7a7a;
-      --font-main: 'Poppins', sans-serif;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: var(--font-main);
-    }
-
-    body {
-      color: var(--text-dark);
-      background-color: #ffffff;
-      line-height: 1.5;
-    }
-
-    .container {
-      max-width: 1140px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
-    }
-
-    .section-title {
-      font-size: 28px;
-      font-weight: 700;
-      margin-bottom: 30px;
-    }
-
-    header {
-      padding: 20px 0;
-      margin-bottom: 20px;
-    }
-
-    .header-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo {
-      font-size: 24px;
-      font-weight: 700;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .hamburger {
-      font-size: 28px;
-      cursor: pointer;
-    }
-
-    .hero {
-      background-color: var(--bg-light-pink);
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 50px 80px;
-      margin-bottom: 80px;
-    }
-
-    .hero-content {
-      flex: 1;
-      padding-right: 20px;
-    }
-
-    .hero-content h1 {
-      font-size: 48px;
-      line-height: 1.2;
-      margin-bottom: 15px;
-    }
-
-    .hero-content p {
-      color: var(--text-light);
-      font-size: 14px;
-      margin-bottom: 25px;
-      max-width: 400px;
-    }
-
-    .hero-content .price {
-      font-size: 32px;
-      color: var(--primary-pink);
-      font-weight: 700;
-      margin-bottom: 20px;
-    }
-
-    .btn-pink {
-      background-color: var(--primary-pink);
-      color: white;
-      border: none;
-      padding: 12px 30px;
-      border-radius: 5px;
-      font-size: 16px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: 0.3s;
-      box-shadow: 0 4px 10px rgba(242, 60, 127, 0.3);
-    }
-
-    .btn-pink:hover {
-      opacity: 0.9;
-    }
-
-    .hero-img {
-      flex: 1;
-      text-align: right;
-    }
-
-    .categories {
-      margin-bottom: 80px;
-    }
-
-    .cat-grid {
-      display: flex;
-      gap: 20px;
-      justify-content: space-between;
-    }
-
-    .cat-card {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 20px 30px;
-      border-radius: 10px;
-      color: white;
-      font-size: 24px;
-      font-weight: 600;
-    }
-
-    .cat-card img {
-      width: 80px;
-      height: 80px;
-      object-fit: contain;
-    }
-
-    .cat-watch {
-      background-color: var(--cat-orange);
-    }
-
-    .cat-bag {
-      background-color: var(--cat-pink);
-    }
-
-    .cat-shoes {
-      background-color: var(--cat-blue);
-    }
-
-    .products {
-      margin-bottom: 80px;
-    }
-
-    .product-grid {
-      display: flex;
-      gap: 30px;
-      justify-content: space-between;
-    }
-
-    .product-card {
-      flex: 1;
-      border: 1px solid #e0e0e0;
-      border-radius: 10px;
-      padding: 30px 20px;
-      text-align: center;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-      transition: 0.3s;
-    }
-
-    .product-card:hover {
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-    }
-
-    .product-card img {
-      height: 200px;
-      object-fit: contain;
-      margin-bottom: 20px;
-    }
-
-    .product-card h3 {
-      font-size: 20px;
-      margin-bottom: 10px;
-    }
-
-    .product-card p {
-      font-size: 13px;
-      color: var(--text-light);
-      margin-bottom: 15px;
-    }
-
-    .product-card .price {
-      font-size: 22px;
-      font-weight: 700;
-      margin-bottom: 20px;
-    }
-
-    .btn-dark {
-      background-color: #000;
-      color: white;
-      border: none;
-      padding: 10px 25px;
-      border-radius: 5px;
-      font-size: 14px;
-      font-weight: 600;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .newsletter {
-      background-color: var(--bg-light-pink);
-      border-radius: 10px;
-      padding: 80px 20px;
-      text-align: center;
-      margin-bottom: 80px;
-    }
-
-    .newsletter h2 {
-      font-size: 32px;
-      margin-bottom: 10px;
-    }
-
-    .newsletter p {
-      color: var(--text-light);
-      margin-bottom: 30px;
-    }
-
-    .subscribe-form {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      max-width: 500px;
-      margin: 0 auto;
-    }
-
-    .subscribe-form input {
-      flex: 1;
-      padding: 15px 20px;
-      border: none;
-      border-radius: 5px 0 0 5px;
-      font-size: 16px;
-      outline: none;
-    }
-
-    .subscribe-form .btn-pink {
-      border-radius: 0 5px 5px 0;
-      padding: 15px 30px;
-      box-shadow: none;
-    }
-
-    @media (max-width: 1200px) {
-      .hero-content h1 {
-        font-size: 38px;
-      }
-
-      .hero {
-        padding: 40px 50px;
-      }
-    }
-
-    @media (max-width: 992px) {
-      .hero {
-        flex-direction: column;
-        text-align: center;
-        padding: 40px 30px;
-      }
-
-      .hero-content {
-        padding-right: 0;
-        margin-bottom: 30px;
-      }
-
-      .hero-content p {
-        margin: 0 auto 25px auto;
-      }
-
-      .cat-grid {
-        flex-wrap: wrap;
-      }
-
-      .cat-card {
-        flex: 1 1 45%;
-      }
-
-      .product-grid {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .product-card {
-        width: 100%;
-        max-width: 400px;
-      }
-
-      .subscribe-form {
-        max-width: 90%;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .hero-content h1 {
-        font-size: 28px;
-      }
-
-      .section-title {
-        font-size: 24px;
-        text-align: center;
-      }
-
-      .cat-card {
-        flex-direction: column;
-        flex: 1 1 100%;
-        text-align: center;
-        gap: 15px;
-        justify-content: center;
-      }
-
-      .subscribe-form {
-        flex-direction: column;
-        gap: 15px;
-      }
-
-      .subscribe-form input {
-        width: 100%;
-        border-radius: 5px;
-      }
-
-      .subscribe-form .btn-pink {
-        width: 100%;
-        border-radius: 5px;
-      }
-    }
-
-    @media (max-width: 320px) {
-      .hero-content h1 {
-        font-size: 24px;
-      }
-
-      .hero-content .price {
-        font-size: 24px;
-      }
-
-      .newsletter h2 {
-        font-size: 24px;
-      }
-    }
-  </style>
 </head>
 
 <body>
@@ -376,7 +15,7 @@
   <header>
     <div class="container header-inner">
       <div class="logo">
-        <img src="/assets/logo.png" alt="Logo Icon"
+        <img src="assets/logo.png" alt="Logo Icon"
           style="width: 90px; height: 50px;">
       </div>
       <div class="hamburger">&#9776;</div>
@@ -393,7 +32,7 @@
         <button class="btn-pink">BUY NOW</button>
       </div>
       <div class="hero-img">
-        <img src="/assets/hero-tv.png" alt="Mi LED TV 4A PRO 32">
+        <img src="assets/hero-tv.png" alt="Mi LED TV 4A PRO 32">
       </div>
     </div>
   </section>
@@ -403,15 +42,15 @@
     <div class="cat-grid">
       <div class="cat-card cat-watch">
         <span>Watch</span>
-        <img src="/assets/category-watch.png" alt="Watch">
+        <img src="assets/category-watch.png" alt="Watch">
       </div>
       <div class="cat-card cat-bag">
         <span>Bag</span>
-        <img src="/assets/category-bag.png" alt="Bag">
+        <img src="assets/category-bag.png" alt="Bag">
       </div>
       <div class="cat-card cat-shoes">
         <span>Shoes</span>
-        <img src="/assets/category-shoe.png" alt="Shoes">
+        <img src="assets/category-shoe.png" alt="Shoes">
       </div>
     </div>
   </section>
@@ -420,21 +59,21 @@
     <h2 class="section-title">Shoes</h2>
     <div class="product-grid">
       <div class="product-card">
-        <img src="/assets/shoe-1.png" alt="Reebok Dart">
+        <img src="assets/shoe-1.png" alt="Reebok Dart">
         <h3>Reebok Dart Men's Shoes</h3>
         <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
         <div class="price">$1289</div>
         <button class="btn-dark">BUY NOW &rarr;</button>
       </div>
       <div class="product-card">
-        <img src="/assets/shoe-2.png" alt="Reebok Pump">
+        <img src="assets/shoe-2.png" alt="Reebok Pump">
         <h3>Reebok Pump</h3>
         <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
         <div class="price">$799</div>
         <button class="btn-dark">BUY NOW &rarr;</button>
       </div>
       <div class="product-card">
-        <img src="/assets/shoe-3.png" alt="Reebok All Terrain">
+        <img src="assets/shoe-3.png" alt="Reebok All Terrain">
         <h3>Reebok All Terrain</h3>
         <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
         <div class="price">$699</div>
@@ -447,21 +86,21 @@
     <h2 class="section-title">Backpack</h2>
     <div class="product-grid">
       <div class="product-card">
-        <img src="/assets/bag-1.png" alt="Ison Backpack">
+        <img src="assets/bag-1.png" alt="Ison Backpack">
         <h3>Ison Backpack</h3>
         <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
         <div class="price">$1289</div>
         <button class="btn-dark">BUY NOW &rarr;</button>
       </div>
       <div class="product-card">
-        <img src="/assets/bag-2.png" alt="Biaowang Backpack">
+        <img src="assets/bag-2.png" alt="Biaowang Backpack">
         <h3>Biaowang Backpack</h3>
         <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
         <div class="price">$799</div>
         <button class="btn-dark">BUY NOW &rarr;</button>
       </div>
       <div class="product-card">
-        <img src="/assets/bag-3.png" alt="Dxyizu Smart">
+        <img src="assets/bag-3.png" alt="Dxyizu Smart">
         <h3>Dxyizu WS54 Smart</h3>
         <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
         <div class="price">$699</div>
