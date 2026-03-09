@@ -27,5 +27,5 @@ This project was completed as an assignment for the **Web Development Kickstart*
 
 ## 👨‍💻 Author
 **Atul Paul**
-- GitHub: [@your-username](https://github.com/atul-dev-ai)
+- GitHub: [atul-dev-ai](https://github.com/atul-dev-ai)
 - LinkedIn: https://linkedin/in/paul-atul
