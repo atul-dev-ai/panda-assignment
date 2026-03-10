@@ -6,7 +6,7 @@ A fully responsive and modern e-commerce landing page built using raw HTML5 and 
 This project was completed as an assignment for the **Web Development Kickstart** course.
 
 ## 🚀 Live Demo
-[Click here to view the live project](https://your-username.github.io/goods-panda-landing-page/) 
+[Click here to view the live project](https://atul-dev-ai.github.io/panda-assignment/) 
 
 <img src="preview.png">
 
